@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="robots" content="index,follow" />
+<title>Example Site Title</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7Mqb/+vZrP8AAAAAAAAAAAAAAADw8vT/yMjM/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD89+z/9NGf//PNov/49uL/AAAAAAAAAADu7+7/v7y9/7m3tP+ws7P/AAAAAAAAAAAAAAAAAAAAAAAAAAD98uX/682g//DKlf//8ef/AAAAAAAAAADw7O//vL27/8/U0P/s7O3/s7W3/6+vsv8AAAAAAAAAAAAAAAAAAAAA6s6d/+/TrP8AAAAAAAAAAAAAAAD09fT/uLu4/9LP0v/89Pf/9/Dw//Dw8P+4uLf/r6+t/wAAAAAAAAAA9+fT/+nJkv/5+Or/AAAAAAAAAADw8vD/tre2/9vZ2v/r8On/gMOK/5Cwl//W3s//ysvE/7i8u/+usbH/AAAAAPLpxv/qwIv//Pr0/wAAAAD18/T/tbu2/9va2///////wMW9/4nAkP93pXb/L5sx/7XKvv/68/L/uLi6/7K2tf/9+fH/5seR//fv0P/08fT/ubW4/93b2v/4+/r/6vfo//P19P/q8ur/kbWN/0qRRf+WwJf/9/T1//Hu8P+rsK3//Pz0/+rSn//m1bH/wr7G/9LU0v/0+PP/hMWN/0CMNP9lt2T/S51H/2ihbf9LmEz/drFz//r4/P/k4+P/sLKz//vu3v/qwI7/z7us/9zf4v//////sNis/zaKOP9ssHv/Poo5/0WYR/8/sEb/YJNe/77pvf/28PD/o6ej/8rGzv/15Lv/4rBq/9ff4//8+P3//////6TQoP83iTH/osSj/7LCsv/t9+3/3vHe//Pw8v/x7/H/nqGh/8bHyP8AAAAA/enc/+m8jf/h0MD/+P/////////N29H/K3wo/22udf+80b3/2OPU///9/v/r7ez/nqWi/8vOzf8AAAAAAAAAAP/////34dP/47uI///dp//f3eD/w8m//7jTqP+Qvpj/cYpo/8rlzf/29Pb/oKGf/87Mzv8AAAAAAAAAAAAAAAAAAAAA8PT6/+DLtP/JoF//jI+P/8zGzP//////9vXx/+307//3+Pf/m52i/8zMyf8AAAAAAAAAAAAAAAAAAAAAAAAAAO7v7f/X297/2dzm/6qmqf/m5+r///7+///////39Pb/nqSj/8rHzP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0dHO/729uf+4ubn/v8TB/7/Cv//Bwr7/q6yn/8vOzf8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPP29v/g4+L/3+Hn/+Hk5f/e5+T/3+Hk/+fr7v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA858AAMMPAACGBwAAnAMAABgBAAAQAAAAAAAAAAAAAAAAAAAAAAEAAAADAAAABwAAgA8AAIAfAADAPwAAwH8AAA==" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
+<style type="text/css">
+ a:link { color: blue; }
+ a:visited { color: darkblue; }
+ a:active { color: red; }
+ a:hover { color: red; }
+</style>
+</head>
+<body style="margin:0px;padding:0px;color:#333333;">
+
+<!-- Masthead -->
+<div style="height:110px;margin:0px;padding:0px;background-color:#669966;color:#F5F5F5;position:relative;">
+<img width="400" height="80" alt="" style="border:0;position:relative;top:18px;" src="data:image/gif;base64,R0lGODlhkAFQAPcAAGaZZi5FLh4tHkZoRgcKBw4UDjVQNSU4JTFKMQwSDBUgFf///y1ELSk+KQ8WDyY4JhIbEggMCAQGBAsRC3d3d0RERLu7uwAAABEREe7u7jMzMyIiImZmZqqqqgMEA8zMzGGRYTxZPDRONCM0I93d3VqIWhspG0twS4iIiJmZmVVVVWaYZhklGSo/KiIzImSXZGCRYE51TmWXZUBgQDZSNj1cPViFWD5ePlaBVh8vHxonGjBHMCk9KWCPYDFJMWSVZCEyIWKUYl+PXzNMM2WYZTZRNjNNMx0rHURmRD9fPzhTOEltSWOUY16MXjpXOmOVY0VoRStAKzxbPD1bPRwqHFJ6UjZQNhQeFExyTF2MXSg8KFqGWhcjFzBIMEFiQREaEVyKXFuIWytBKwoPCjdTNyI0IiM1IxYhFhsoGxEZETpYOi9HL1N8Ux8uHyAwIGKTYhQfFDtZO1yJXBAYEDtYO2CQYF6NXjJLMhgkGBUfFUluSUBfQF6OXjRPNDlWOTxaPB0sHUZqRjJKMjVPNWSWZCAvIBkmGRomGlWAVRMdE050TkNkQy5GLkVpRSU3JS1DLT5dPkFhQUJiQiQ2JF+OX1yLXEpvSk1yTSExIUtvSyxBLDRNND5cPkJkQg0UDWGSYSY6JhciF1F6URMcE0JjQkhrSD9eP12NXURlRDJMMh4uHliDWDlVOUdqRzpWOlV/VSc7J0BhQBwpHENlQxwrHCo+Kic6J1B3UFB5UCg7KFeDV1iEWBooGi9GL0htSFJ8UiAxICxDLCU2JVeBVzNOM0NjQzdSN1qHWl2LXUxzTElvSSQ1JEVnRVR+VEtxS2KSYk52TkxxTFuJW0VmRS1CLQgLCE93TwkOCThVOCIyIhIcEj5fPjBJMBgjGFaAVlmGWUdrR0puShsnGyxCLE10TVF7UVeCVxYiFic8J1mFWTtaO1N7U01zTTExMSg9KDFIMURnRElsSVuKWys/K4CAgBglGFR9VFR/VCQ3JCEwIVJ7Uk92TzVONVaCVjhUOBAZECH5BAAAAAAALAAAAACQAVAAAAj/AAEIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuXMGPKnEmzps2bOHPq3Mmzp8+fQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLNq3cq1q9evYMOKHUu2rNmzEqvQOIEWpVq2bT2emEu3rl26W4UgoeGCgAYKFZSt+GiDBg8TiE3QQCLk4NzGKW3cnTwZMoDHEPXy9QtYcNyNLSqIHk269Ohag68KwaCCQocMCxZQCPCj45YWGyiksMDbAgUVGFxgGXgDjmgMPlDa2GC6eXMMlIofT95wdevXsWfX/pzxQuzv4MOD/7/ABGumCuIpoOnB8QYGFOLBd9CAS+CVD7EzbBh2sgiF+ACGV0Eg9+W3X0PnpbcedxlpUYEKHYBHAgUUumYBbAtY4IkNWPGBgWgkfFcBKGBshAUG+MX2AWAcRPgdBQy8cAJ6L47zQkHFXdBCR39w8F1vFoT43Qe9pbjABgbQmJ2NOMKh40AegigiiQxi1MMDBmwAHgVnsNCGAHOM4YEFGaaRDFYy3AJEHmTGVkEuWWzkgosLcPCPAA0sA4EGKVZwAAiiaLClOCAMhIULFeCnwS0c+ULjBg6MIamSC1wwgaTV+FipLYK+SKihiCrKKABprtnmAm/GWaVFT1jThXffqf+QiyQhTGEKJJj8hwIVZ161Qh2lHPKfm5Owl9GM36Xgxg1JqGFFDbbQqIEtlLwgAHwZYoBAEwPNKaIUN2rkaGwX3CDFFI9QesEMU6BL4wUIUIGtBdpyK5C3boILwK/BDotqsatatAIhPcDqZgC+lLCFOaIA8R8FQPyS1QpPMOJvBSMUmlEv2C6ggSCb+BJGE/2I8W4XIMgADh4XXKANAz4YCwAvp1bwQBAbLYHeB57ssEQMg6iriSKKxIIBuWq0wrLLMMtMs4g3C0SxxSJmHDBGBqN6ACUENcPcBkZwqNUmF1udkQ6nXiDFLzIMpIgGvH3RR20wTCGFGlIMEkO4ABz/cioG1Hyy0TC5cTDJLALpPN4MAr1wBIUsSFL33XnvPZDf3wEu+EBkV63x1RVlXYEZMAx0wiA+1EIHAlwDYAMSO5iwwxYGVYFXQWol5gINltVOgwk1CPE7YjzUMJDwLhAP10G5G29D7InRIHZBIpT9uUBC1JA8YjtU0RDmsW0gzBsEEdJFGgVEwcxgK4BAiiOJGPAEQSykjUB5BmW/vezeL/SCFwIQgx/YkDh1MW5f+gDEAfygiPa9L37zG0j9vgMv/Amkep7Ln/YS0z3QIUR0ZpsRYAKghmb8AAa4UQEKLIACHtBuID7QwGlSAwUT/KU3HaAABrhBkOeZgDMW4AAG/yjQmxRwAAjR8MEQO8CbFFRAC+sYiA+ByAEebGCFvaHABmrxwoFg0E1mAwAMlNii3qBAA0AYjkImGJsOfCETBJGBDe4gBSNsYYo35EAcUgMANlZKAEWggfEEMkYMlJE3Z0yjQoiAjBAEQwrGUhwFDwiANzAjGF3QxA/zuEcJpg2Qgryg9QhSyEOyEI1q9OBAQKgx/8hGDD24kSvBgwJQpOYGGsBQpcoTmlOBJwMaWINAlrNCXXbASN/pAAZyKZ4UPOAbrrvihV6kKfGgQAtdBMAXUWW2G1yBAhjypTKnoZA7+GsBHdiAJxSzlh9kwRtyIFwxX8SD8hxqA0KSTYU4EP+CFXgTnLERJwbImZAXfIIPKSvg4gaygjeUQ5q6pEA9AXDPfFaIAvxcwTYx9rl/hlM+A1XlKsFTgUNsggY04EWE1GMsXGgABbpcgAoYsAI2oEhFKkjEMWpQzRzSaQH68QYAEgQgX6Lzo7R8wAqICp42ZcCoC6glHzdqNfekSJmjuGlAucA3g/xiAzFdAAl8A5gLuAAJQ6VUbFTQBj4s56fh6YAOpKBVrGo1Q1yFiCTJRUmBMDVWbX1rgOQaBKpqzKptxEBWjWSBvIo0aym4aJsocAQ5COQHTrBhPjOAAT3wIAWJzQY2cDBLDTiABXuKqBheIAMztAyZKcBAIjBg1Nj/XoG240mZay+AzAxwQAK3PSeqBpAawwKgQGLFgDBQoQUM6JIDxuBjQYJAhWoCqAMq0EI5dmukCtgiC1WA2zSzU6EKuAECKSKBcpnr3O9AV7oL2Wul+koq7orou+HlTUTL64ZKGPe46V1vc58b3ccG6EWFKEHjVjGEZTCzjTrQ1AcwwIA9kKEHffhPB7hgiiQkQQDV1BAMZLCKLkzCXx04wjtM0YD2BrQAvUhCi3VZATq8oMQn/g4wdWAKKfgDDdZNAS8iaFievkgVe+iDE9DQsQ4kAmcHkQEb8FABqIYnBQfAgYkvtjUi/GECbKIgHmQhAGyYoJoUQLKSmZzMJz9E/77rKgiJtyyiLn85zOQac5kZIQfjGjk7al5yk92syqwBRjQqzE6CB0KILMzgCCrYkoowcIA4kKIHRJDGhzbAjS7EgBy4+dEcbLACJqwiB/7KbgiKoIZR0EkFtvgDq10togb8wNSodm8hFmGEGiQhFWgAbWxIQABVGRa5HiMGJ5hACCNEOj8SUDBC3hCLFqRhAxyYp3hUEAdz5NpNpCOCHPrwhbSVIgSu6IInjKQBZTPb2TqO9psNWJBSn/pi4R53uSl47nRD4RnGRXa7l93sZwNV3oUm6QjWIAgxFIBMFFg0QYIADhZ0LD/KDUEg8PeEGaiOCkcgwIf8ZYE01EcgRv+42Bp88YMX8EDlrWj5y6v2DJRfrAt3AIMMiGCHAxi8UqIQpeeydoHTIuYQ6lJEQn6FChoUgQdt+IIEsI3MDuSBCSnPoDshkLYdlCAMdiC60U2A9PEo3SFwpu9Asg7GQm2961+3QxA0Okqxs+DoSTewiJTQhS4IAg+gjbi0CfIMJWAgnx47Qg1QAWUAEAELVMgNdsJjgTnEwIsXA4UdBGJOEeXCXp1vu9DdFAVSSw0HR6NgIEbPzUBQ6qlAQuYF0Lr0JxxjET7wgyn+YIUGeELY5ArDf/uYtgMiS8dAsoDsad+QtCNk+H6MM0EMe/z8JH/5egd3OmDQgzVwIIhmCIP/QVZACQFQKuI1aDwA3AP8DAFG1Jdn/ehKB4DOgZv+9uemxjY6iToQ5AcGkwESIAnyNwKNQCnJh0OQswgNIQOfAAb3EA6rcwepRy7kAH3FJxCWgIAJaAE5RAEswIBoR28HgYGTRD3Ws4FN1YEfGILZp38CAQJuoACa0AsIQAP0NxBEYAbnBExWIF3IhgIYcA1nYDCVF3/aNEpJmEFLKHpNCIMDsQta0kZX0AkFyAyUggETcAZ4gAdc8AUToABlAAQMhBA1pCM5KBAyAAK48HAUtAgmyFcCoQdZuIVd+IVhOIZlOIILVYJKSHwnOH3WQ4fgoYVc6IVgKIZkeHYexEqX/5UMDCAILEAhayBdPqApujRhujAQf4ZOXOADN3ADRmh5mMeE/3WKfwgAqGBwHLAMllCAJ9ApbjIEpOAFthgJScAsSkAG9mIQJgBxfQBfpIJnH5AAkRCH8yUQtyCLqEKLtugFuKiLvDhvfWgQyCh9pdh2y0hSzniLuZgEu9iLoOOI+/IG0hAIgiKAmwMASsBMH0ApKDACbQMAQPBqWqAGrnAJo4iEqGiKSjh8AKAFwsZZToADBRh24JECiRAIMdCQMQANuPAKYTBiCPE0FHAA5FMQW1CBFJADA3CNB0QIkLWQDvmQETmR89h8JGiNfxh99GVYIpmQJOmQECmRFOlBq/+hcNcDAK5kAQVgkOt3eEClAYBwTirwCIOBNiKyBpawCy1AcqRYgPv3j1QpIjrwOTGka4JgLFQlBIbwUxqgCQVRAybAfAdhCGTSAWlQCQbRAthCkFUAkmr4leARlmNZlhHhfH7IhIAoh4LoOTJAl99hlwRBlmYJOn+FMa1QFzVQj2UyHIglG4DgBQVgJMBkAACAlsnkAGLwHk0VlQDgBnRCATrgf6E5mqXJehxwBPS3TSSgAQ9QA0jAAw+WAiawB/AQLqL5IjrQA5HwehoACzVwAjRQAN+nAsUgjAKhDSmiAmcwBRxiA2RZTSqQA0bAB7uZHakpEH6kAlRgAjrym7//FJzDWZzHmZwPUQw/hwFxgBDZKRvb2Zcy9Z1Pcpq86X/iqWPkSZzGaQHIqZzcAQO1YF2HRhockAKwQQGYEA64kSIWMArbEAxt8GBitQE8IAYXx0IhoksksAE60gIXgE/JhAE6EqL5pExPwgAdkwIXYAhQ8ISxYUQqIGwkUAECYAVDsHkgKqKJdQG5EArCZUQVQAFCogJFEEEGkTVB5KHY5lQcIAt7QAUmOqL1eQDAlwErVCdkAKRXxgFDWqRHyhAoFKI/pUP1KRA7eqIkuiMAYKU6lqVVNKU92gJ1wKUJ6aVEulZhCjqzdGBbkg3B4C/6EQVDcAzfEGHhQQFr4GJN/1WBFKRWJBUgF/ACStlUOkAE2xQfQugCnSACryAD1SceF0AKhiBciSoAQ7CTA0EAYSUeFqABmDALBwCpFHQjUACpH6ABrpAEpXpgFICqqmoQfRofFbAEgxGq4TGpAHCr4pGrtEouQTAAvRogv5qqHqQMQ3pR2rqtFaAJe5CtvwEIcWANMkAIzjCJF1UBDMACG4Cgw4YC1zAK25oHubGtFFKv9noGWeAKHKCtHHAAMLBN44VOFfAFRrAHRqALNyKF9kohZ/AKSmAC0tRUWgQBscAKGWkQUWBIu0F5Z/QFDdAJQ5AM+Lqt+goAnxAKKmAksRUAqbAFETuxP1KxF5uxCf+BrQ17r/GwsCWrrSebsiubLBjQBT17UfpaBzGbpTO7ARaLsR70BMSQA0AABGXgAqpABQLQBlqrCoBABYDgBiKwA8fAD4DgCG0wD3sgBfjzCXTgAi5QBpiQA0XQC86gCTogAS0zAVRABtuwDG+LCUfQAGuwA1zACEeQA1WbA7TQAp3gBoaLuC6guFGwBjgAA4UAC5gQuapwB1HQZxeDty1zBVogCVYABXWQGjKgB4V7uIlLC5P7CnzgBEUQdS3TMg4gC0UQCWFDBAghBEagBTrwBbXbMglwBjswA3TgB2DwBKr7uK07uQb5AtFgBglQu2iAAK7QCEEQu7MrvLV7u7n/u7sM8QSDoAMBAAgC8LZWCwhiMASLMD+pu7qQK7mUCwDSS73WiwAhYAby+7yUuwLcS7vfi7u6awO8CzovgAN3YAUh0MAO/MAOzAo7oAcwoMBWQAdDEAebJzXRkQoNLMF60AOikAqQoAYhQAecYASNYAo+4MBW0Af7oAZDAMEhQAYMwAAzDMFWwItPwA6M4AcNrAaCwAk9sFFiYDcNHAcGsAuEQBCMJMM0vMNNsAIwoAeCAAkhEAdT8Ad0AAkiwAk6V1C60Ad+cANxoMVb3MXGYAX28AYr8MQ5/MBSvC8gsAhk4MBSYAWBAAIrQMVWjMVazMVeDMYpqRAJvMA0XMOC/9AMNwLHUTyN7WPHeGwFSNAMfhDHLgzJVXzFWZzGgxzGHrQCP9ADclACpnzKqHzKYBcEMjDKchAGWfAGByw1b5AFprzKRPACfCAKzOAFSGANTfADtXzKYFAHTwAClZDKJSAHfEAJyZzKYDBipWYHYXDLlZAyRswKsSAJS6ALzyCML4DMyhzN8/gCPYADltAJM+AFrcAGdrAdi2SOv6AH6rzOgSAKYMAEfBTOz4zK5Cw1TLAFliAJkuAMYQDP9nvO6bzO7fzODyHKpKzMyywE8MzP43yTpSbQBG3QT2DR0HyTCY3O6szO7ozQImUVAHnSKr3SH5HSLP3SMF0R77maaf8Y0zZ90wtRQ+v2HSgwBi6K00Ad1ASRX4i3AERyqUKd1DedXx1YcjKj1FCt0jLgBBPQDROQBhAAAWmwhfmwiVH91SJFBCVgBFJgCjXQLjVwA5BwB5YF1m4NOu70CyXZkKIgByb91nit1CfQPw9hO0RxAtOT1yqtBAUQsVBAlolhAi8aEqGhAZfwEFAgQ3cgFKGxAYhgEVuwAwXAA4Ut2FuhBCpAAt/XpECSByLhHSlwCA/xiyQQAUGBLBTgCBbhliSQAh162Z6NFQVQ20TiAIFHIYYTErANBA/hHRYAAUFhZCoACxWRkwhacuKY21OhBD4CWiqQAB8ggGVQBgcQCjr/coY7wgY8QAAXQADJAaKcbVaErSMwWwBw4ALlnRxGVgFRcCjlPTsDId4t0wLLIRs5kNnkDQc3gD3FWd7CIRA14CQXIOAgmjwX0NkEId7kXQA4uH5OQgD4DQMFLuDLCp7mPRA7AB8aEN8CIeFmhQUN7iQtkCOFTQMP4zHoIN1XsdsdMFbCWyYo5S0boJQqgBvu6lupEGm2jU4cECIoAAy7/QER4lsjEOJHAgQasORHXuIYIGwogA+R9q/vARu5ygDukacZIFfizQEp8gEO4B1MJFYaUAow1K6wMSFiEBr4gaXAgEJ5mqsiADdAxQGpIBC/uACg5VtaAAVVDhsoik74/3EBQSvaVJBDK8IFQCnjVKEEY6AAEQABUYAeZEUBJgPo8MEBLJBLvgUfFVCUez7nZO4xsIJdsLHjF+IBzkUCEOIxj/1ZsuGlbvAfGjAB+IFRGSCAcNDrFRAiF2DrHVABT5UGNIICGqYAAgEFYOVbkVZ5kfYBsw4xuhJpHXANJJABrbEBIiAQsOKfvy4Bv5gBFCIbnfIBXpohwy6AOpADCQAMeyDpW2FkRGIBKaAD9QMbKcAC3A5M8rIAGMACEaICAvAwCY8qgsIzj4MqEpDsoLUBfHIkaOUtFRAKwBshF+AjIHgEpP4wLBDxPlndeXA0KIAGGpYHxu0Afk4mRCkoFP8QAd1OaUdjAVoSW/+RAhHfoWcwCNzS3+rlAGTS8XXSrnUSaepF8ySg6BnQ2vb+FU6uAXPgAOeQCj7wHzzTApG2K6EQJATgCSTQ2kcAWhigABzvI/9q6xqgJShQDfkk2ufALVjATEee5GMQIRswCE6eKAJIB27P6wQfDOjBAdfiMWIg8zkAADnZAVewCT6iAoKSAlwgDzdvXcoECD4i6AKBBJEWcaz6AWNwpSgwibJRCFOoImgU9V7x5xcAlDGEIRuQYajiCIJy3GiuAMFObPdBbCI+AmBFAtVQ+GheARtAAGc1TAxwUyMO6HNQ9Fiw2xlg3GnwlHVi3AWACRFSAUT/XymQXycHcBno0ZF/zhyyAQSXqE8yVQEXAAHUAA0jIOoSIBAujipRkPPPX6Ma4AEmABBfLCyoEKXCAgoVMIxxhAPAQ4gRJU6kWNHiRYwZNW7k2NHjR5AhRWK8sMDCBZQtMGTIQAEhJpcUNnxYgALNQQo5SnZQsFPgAgwzF6hw4bJCNRIkNmDgsAERADYbNGDosEADziMoEGJIgRBpBg0cFhCUwBKDS6AlLRSg4VIDAwA2Niz4wHXsBQwLlFYwK5bChbABNGzYQCKDhIcmBl7wg5NF1woXVFRIQGLBBVRzOwSlAGrkZ9ChRY8mXdp0RbljVdOjqSGCYQwYLC+oSmGE/1GDCHNoQFhSdQYVLI50vRBFRQbVGhYB4NF1LIpuYgtioDmWAgtHYsciv3AAbYbFc20qvuwQACznyNc20E5XA5o8A8d2eL2dA5WHBDJ8GNOWYJTCVKMgL/4AcAetBQ47bUEGG3TwQQgjEgKDCiqssJ0KNOCilw0UMuKaDK+oYINBOsSgEQox+CPFuVKoUAIqSqniqjMAUKnCCxRwiI02TDyDFRMbqaGAqzBQYA8sqOhwgww6gAAGIEzs8AwKSYRCAw0UgOiENq7CKQcARqBQgwQagiKPqzYYJZsxroIRiYd8yNARuSqoJ4YiQFRIgTEdAQDKDjXwQIcICzX0UEQTPfcliUcafWQQEURwCBEnGgkCgFkknWWKJii1dNFPk7hDhQU4AOWRGCC6ZIhUAVgUVYk8vVTWh1a1dMIOVFCBpgrEeMhTUZyIYVFOAbhEHfNOqMBFDsz646FFJY1o1WKNZVWiTCcVFqJZHglV2l+dADdRcss191x0AfCvAi0alKu6D4JrtSMkVJitg/cuTXdffvv191+OoLzgjHkXlMITlMYApZSQuogAJQjEMA9giiu2+GKMM9Z4Y4479vhjkEMWeWSSSzb5ZJRTVnllllt2+WWYY5Z5ZpprtvlmnHPWeWeee/b5Z6CDFnpooos2+mikk1Z6aaabpiggADs=">
+<div style="float:right;width:728px;height:90px;border:1px dashed black;font:x-large 'Open Sans';text-align:center;margin:9px 9px 0px 0px;">
+
+<!-- put 728x90 ad code here -->
+<br>728x90 ad slot
+
+</div>
+</div>
+
+<!-- Top Nav -->
+<div style="background-color:#669966;color:#FFFFFF;height:37px;border-top:1px solid white;border-bottom:1px solid white;">
+<ul style="list-style:none;margin:0px;padding:0px;">
+<li style="float:left;margin:0px;padding:0px;border-right:1px solid white;"><a href="#" style="display:block;background-color:#669966;color:#FFFFFF;text-decoration:none;padding:6px 12px;font:18px 'Open Sans';" onmouseover="this.style.color='#FFFFFF';this.style.backgroundColor='#99CC99';this.style.textDecoration='none';" onmouseout="this.style.color='#FFFFFF';this.style.backgroundColor='#669966';this.style.textDecoration='none';">Home</a></li>
+<li style="float:left;margin:0px;padding:0px;border-right:1px solid white;"><a href="#" style="display:block;background-color:#669966;color:#FFFFFF;text-decoration:none;padding:6px 12px;font:18px 'Open Sans';" onmouseover="this.style.color='#FFFFFF';this.style.backgroundColor='#99CC99';this.style.textDecoration='none';" onmouseout="this.style.color='#FFFFFF';this.style.backgroundColor='#669966';this.style.textDecoration='none';">Menu Item 1</a></li>
+<li style="float:left;margin:0px;padding:0px;border-right:1px solid white;"><a href="#" style="display:block;background-color:#669966;color:#FFFFFF;text-decoration:none;padding:6px 12px;font:18px 'Open Sans';" onmouseover="this.style.color='#FFFFFF';this.style.backgroundColor='#99CC99';this.style.textDecoration='none';" onmouseout="this.style.color='#FFFFFF';this.style.backgroundColor='#669966';this.style.textDecoration='none';">Menu Item 2</a></li>
+<li style="float:left;margin:0px;padding:0px;border-right:1px solid white;"><a href="#" style="display:block;background-color:#669966;color:#FFFFFF;text-decoration:none;padding:6px 12px;font:18px 'Open Sans';" onmouseover="this.style.color='#FFFFFF';this.style.backgroundColor='#99CC99';this.style.textDecoration='none';" onmouseout="this.style.color='#FFFFFF';this.style.backgroundColor='#669966';this.style.textDecoration='none';">Menu Item 3</a></li>
+<li style="float:left;margin:0px;padding:0px;border-right:1px solid white;"><a href="#" style="display:block;background-color:#669966;color:#FFFFFF;text-decoration:none;padding:6px 12px;font:18px 'Open Sans';" onmouseover="this.style.color='#FFFFFF';this.style.backgroundColor='#99CC99';this.style.textDecoration='none';" onmouseout="this.style.color='#FFFFFF';this.style.backgroundColor='#669966';this.style.textDecoration='none';">Menu Item 4</a></li>
+<li style="float:left;margin:0px;padding:0px;border-right:1px solid white;"><a href="#" style="display:block;background-color:#669966;color:#FFFFFF;text-decoration:none;padding:6px 12px;font:18px 'Open Sans';" onmouseover="this.style.color='#FFFFFF';this.style.backgroundColor='#99CC99';this.style.textDecoration='none';" onmouseout="this.style.color='#FFFFFF';this.style.backgroundColor='#669966';this.style.textDecoration='none';">Menu Item 5</a></li>
+</ul>
+</div>
+
+<!-- Outer Table -->
+<table style="margin:0px auto;padding:0px;border-collapse:collapse;border-width:0;border-style:none;width:100%;">
+<tr>
+
+<!-- Left Menu -->
+<td style="width:185px;margin:0px;padding:0px;vertical-align:top;background-color:#F2F2F2;border-left:1px solid #99CC99;border-right:1px solid #99CC99;">
+
+<!-- Menu -->
+<div style="font:bold 18px 'Open Sans';padding:5px 0px;background-color:#99CC99;color:#111111;text-align:center;">Menu</div>
+<div style="background-color:#F2F2F2;padding:10px 0px;">
+<ul style="margin:0px;padding:0px;list-style-type:none;list-style-position:outside;text-align:center;">
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 1</a></li>
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 2</a></li>
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 3</a></li>
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 4</a></li>
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 5</a></li>
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 6</a></li>
+</ul>
+</div>
+
+<!-- Most Popular -->
+<div style="font:bold 18px 'Open Sans';padding:5px 0px;background-color:#99CC99;color:#111111;text-align:center;">Most Popular</div>
+<div style="background-color:#F2F2F2;padding:10px 0px;">
+<ul style="margin:0px;padding:0px;list-style-type:none;list-style-position:outside;text-align:center;">
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 1</a></li>
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 2</a></li>
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 3</a></li>
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 4</a></li>
+<li style="margin:0px 0px 4px 0px;padding:0px;"><a href="#" style="margin:0px;padding:0px;display:block;color:#575757;background-color:#F2F2F2;text-decoration:none;font:bold 16px 'Open Sans';" onmouseover="this.style.color='#FF0000';" onmouseout="this.style.color='#575757';">Example item 5</a></li>
+</ul>
+</div>
+
+<!-- Optional Section -->
+<div style="font:bold 18px 'Open Sans';padding:5px 0px;background-color:#99CC99;color:#111111;text-align:center;">Optional Section</div>
+<div style="background-color:#F2F2F2;color:#333333;padding:10px 10px;font:15px 'Open Sans';">
+put optional stuff here
+<br><br><br><br><br>
+</div>
+
+</td>
+
+<!-- Center -->
+<td style="vertical-align:top;padding-bottom:10px;">
+
+<!-- Article Title -->
+<h1 style="font:bold 27px 'Open Sans';margin:0px;padding:0px;padding:14px 0px;text-align:center;">Your Site Title Here</h1>
+
+<!-- Paragraphs -->
+<p style="font:18px 'Open Sans';margin:0px;padding:0px 18px 16px 18px;">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam urna. Sed ut felis vel libero aliquam blandit. Suspendisse justo arcu, aliquet vitae, venenatis at, consectetuer nonummy, erat. Donec vitae tortor vitae augue blandit molestie. Proin scelerisque orci a tellus. Integer auctor. In massa risus, feugiat at, tempor quis, sagittis nec, metus. Vivamus congue vulputate magna. Cras ornare tempus elit. Fusce volutpat lectus ut turpis consequat egestas. Nulla metus nulla, tempor sit amet, laoreet pretium, porta eget, eros.
+</p>
+
+<p style="font:18px 'Open Sans';margin:0px;padding:0px 18px 16px 18px;">
+Ut imperdiet. Aenean nunc. Vestibulum risus tellus, convallis eu, tincidunt pretium, euismod ac, metus. In at libero fringilla enim hendrerit faucibus. Phasellus eu quam. Quisque condimentum rhoncus mi. Phasellus sem sem, mattis id, volutpat congue, fermentum in, est. Nunc sagittis, ante pretium euismod lacinia, risus diam vehicula libero, vehicula mattis nunc ligula et tellus. Vivamus convallis, velit a dapibus euismod, augue turpis mattis risus, at condimentum lorem massa et turpis. Donec semper. Mauris turpis sem, imperdiet at, ornare ac, pharetra sit amet, leo. Proin tempor, velit eu egestas bibendum, est justo sagittis diam, gravida tincidunt libero odio ac nibh. Praesent ornare magna sed nulla. Nullam eu augue.
+</p>
+
+<p style="font:18px 'Open Sans';margin:0px;padding:0px 18px 16px 18px;">
+Proin tellus. In velit eros, pulvinar at, adipiscing ac, iaculis id, nulla. Duis tempus imperdiet metus. Sed id eros. Aliquam erat volutpat. Donec a dolor. Fusce magna. Vestibulum rutrum aliquet metus. Fusce odio est, vehicula in, dignissim a, cursus eget, ligula. Phasellus nisi orci, egestas non, ullamcorper id, mollis ut, dolor. Integer porta elit in odio. Mauris rutrum rutrum leo.
+</p>
+
+</td>
+
+<!-- Right Menu -->
+<td style="width:185px;margin:0px;padding:0px;vertical-align:top;background-color:#F2F2F2;border-left:1px solid #99CC99;border-right:1px solid #99CC99;">
+
+<!-- Search -->
+<div style="font:bold 18px 'Open Sans';padding:5px 0px;background-color:#99CC99;color:#111111;text-align:center;">Search</div>
+<div style="background-color:#F2F2F2;padding:15px 0px;text-align:center;">
+<form method="get" action="http://www.google.com/search" style="margin:0px auto;padding:0px;text-align:center;">
+<input type="text" name="q" size="13" maxlength="255" value="" style="margin:0px 3px 0px 0px;padding:3px;border:1px solid black;font:13px 'Open Sans';width:104px;">
+<input type="submit" name="sa" value=" Go " style="font:13px 'Open Sans'">
+<div style="margin-top:8px;"><input type="radio" name="sitesearch" id="sitesearch1" value="YOUR-DOMAIN-HERE.COM" checked="checked"><label for="sitesearch1" style="font:13px 'Open Sans';">Search This Site</label></div>
+<div style="margin-top:1px;"><input type="radio" name="sitesearch" id="sitesearch2" value=""><label for="sitesearch2" style="font:13px 'Open Sans'">Search The Web</label></div>
+</form>
+</div>
+
+<!-- Optional Section -->
+<div style="font:bold 18px 'Open Sans';padding:5px 0px;background-color:#99CC99;color:#111111;text-align:center;">Optional Section</div>
+<div style="background-color:#F2F2F2;color:#333333;padding:10px 10px;font:15px 'Open Sans';">
+put optional stuff here
+<br><br><br><br><br>
+</div>
+
+<!-- Sponsor Links -->
+<div style="font:bold 18px 'Open Sans';padding:5px 0px;background-color:#99CC99;color:#111111;text-align:center;">Sponsor Links</div>
+<div style="background-color:#F2F2F2;color:#333333;text-align:center;padding:15px 0px 0px 0px;">
+<div style="width:160px;min-height:160px;border:1px dashed black;font:x-large 'Open Sans';text-align:center;margin:0px auto;">
+
+<!-- put 160x600 ad code here -->
+<br><br>ad slot
+
+</div>
+</div>
+
+</td>
+
+</tr>
+</table>
+
+<!-- Footer -->
+<div style="background-color:#99CC99;height:15px;margin:0px;padding:0px;border:0;font-size:0px;line-height:0px;"></div>
+<div style="background-color:#669966;color:#F5FFFF;text-align:center;font:18px 'Open Sans';padding:15px 0px 0px 0px;">
+<a href="#" style="text-decoration:none;color:#F5FFFF;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Home</a> 
+<span style="padding:0px 3px;">|</span>
+<a href="#" style="text-decoration:none;color:#F5FFFF;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Menu Item 1</a> 
+<span style="padding:0px 3px;">|</span>
+<a href="#" style="text-decoration:none;color:#F5FFFF;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Menu Item 2</a> 
+<span style="padding:0px 3px;">|</span>
+<a href="#" style="text-decoration:none;color:#F5FFFF;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Help</a> 
+<span style="padding:0px 3px;">|</span>
+<a href="#" style="text-decoration:none;color:#F5FFFF;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Contact</a> 
+<span style="padding:0px 3px;">|</span>
+<a href="#" style="text-decoration:none;color:#F5FFFF;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Site Map</a>
+</div>
+<div style="background-color:#669966;color:#F5FFFF;text-align:center;font:14px 'Open Sans';padding:10px 0px 15px 0px;">
+Copyright &copy; 2015 Your Site Name - All Rights Reserved.
+</div>
+
+</body>
+</html>
